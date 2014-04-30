@@ -348,7 +348,7 @@
 			</style>
 		<script>
 			/* Variablen- und Grundsetup */
-			var version = "V1.2-201305031109-RC11";
+			var version = "V1.2-20140430-RC12";
 			var speicherversion = 1;
 			var speicherstand;
 			var running = false;
@@ -1537,6 +1537,11 @@
 				if (rollenanzahl<spieleranzahl)
 				{
 					Anzeige_Hinweis("Weniger Rollen als Spieler sind nicht möglich!");
+					return false;
+				}
+				if (rollen[rids['werwolf']].anzahl==0)
+				{
+					Anzeige_Hinweis("Ohne Werwolf geht es nun wirklich nicht...");
 					return false;
 				}
 				
