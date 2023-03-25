@@ -348,7 +348,7 @@
 			</style>
 		<script>
 			/* Variablen- und Grundsetup */
-			var version = "V1.2-20140430-RC12";
+			var version = "V1.2-20230325-RC13";
 			var speicherversion = 1;
 			var speicherstand;
 			var running = false;
@@ -1171,7 +1171,7 @@
 												rollen[crolle].werte.ziel = (auswahl.length>0?auswahl[0]:-1);
 												if (rollen[crolle].werte.ziel!=-1)
 												{
-													antwort = (((leute[rollen[crolle].werte.ziel].rolle==rids["werwolf"]) || ((leute[rollen[crolle].werte.ziel].rolle==rids["verfluchter"]) && (leute[rollen[crolle].werte.ziel].werte.istwolf)))?"Ist Werwolf!":"Kein Werwolf.");
+													antwort = (((leute[rollen[crolle].werte.ziel].rolle==rids["werwolf"]) || ((leute[rollen[crolle].werte.ziel].rolle==rids["verfluchter"]) && (rollen[rids["verfluchter"]].werte.istwolf )))?"Ist Werwolf!":"Kein Werwolf.");
 												}
 												else
 												{
